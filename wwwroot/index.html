@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tatiana Cruz | Secure Job Portal</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <div class="topbar-left">
+                <p class="eyebrow">APPLICATION SECURITY PROJECT</p>
+                <h1>Secure Job Portal</h1>
+                <p class="subtitle">
+                    Student: Luisa Tatiana Cruz Diaz | Student ID: 8987164
+                </p>
+            </div>
+
+            <div class="status-pill">Online</div>
+        </header>
+
+        <main class="phone-frame">
+            <section class="hero-card">
+                <div class="hero-text">
+                    <span class="hero-badge">OWASP-Informed Secure System</span>
+                    <h2>Secure Client–Server Application</h2>
+                    <p>
+                        This project demonstrates a secure client-server architecture with multiple attack surfaces including authentication,
+                        search functionality, file upload, and role-based admin access.
+                    </p>
+                </div>
+            </section>
+
+            <section class="cards-grid">
+                <div class="card">
+                    <div class="card-head">
+                        <h3>Login</h3>
+                        <span class="mini-tag">Auth</span>
+                    </div>
+
+                    <label>Email</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email" />
+                    <small id="loginEmailError" class="error-text"></small>
+
+                    <label>Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" />
+                    <small id="loginPasswordError" class="error-text"></small>
+
+                    <button class="primary-btn" onclick="login()">Login</button>
+                    <p id="loginResult" class="result-text"></p>
+                </div>
+
+                <div class="card">
+                    <div class="card-head">
+                        <h3>Register</h3>
+                        <span class="mini-tag">User</span>
+                    </div>
+
+                    <label>Full Name</label>
+                    <input type="text" id="regName" placeholder="Your full name" />
+                    <small id="regNameError" class="error-text"></small>
+
+                    <label>Email</label>
+                    <input type="email" id="regEmail" placeholder="Your email" />
+                    <small id="regEmailError" class="error-text"></small>
+
+                    <label>Password</label>
+                    <input type="password" id="regPassword" placeholder="Create a password" />
+                    <small id="regPasswordError" class="error-text"></small>
+
+                    <button class="primary-btn" onclick="registerUser()">Create Account</button>
+                    <p id="registerResult" class="result-text"></p>
+                </div>
+
+                <div class="card">
+                    <div class="card-head">
+                        <h3>Search Jobs</h3>
+                        <span class="mini-tag">Search</span>
+                    </div>
+
+                    <label>Keyword</label>
+                    <input type="text" id="searchKeyword" placeholder="e.g. developer" />
+
+                    <button class="primary-btn" onclick="searchJobs()">Search</button>
+                    <p id="searchResult" class="result-text"></p>
+
+                    <div id="jobsResult" class="list-box"></div>
+                </div>
+
+                <div class="card">
+                    <div class="card-head">
+                        <h3>Upload Resume</h3>
+                        <span class="mini-tag">PDF</span>
+                    </div>
+
+                    <label>Select File</label>
+                    <input type="file" id="resumeFile" accept=".pdf" />
+
+                    <button class="primary-btn" onclick="uploadFile()">Upload PDF</button>
+                    <p id="uploadResult" class="result-text"></p>
+                </div>
+
+                <div class="card card-wide">
+                    <div class="card-head">
+                        <h3>Admin Panel</h3>
+                        <span class="mini-tag">Role Access</span>
+                    </div>
+
+                    <label>Admin User ID</label>
+                    <input type="number" id="adminUserId" placeholder="Enter admin user ID" />
+
+                    <button class="primary-btn" onclick="loadApplications()">View Applications</button>
+                    <p id="adminMessage" class="result-text"></p>
+
+                    <div id="adminResult" class="list-box"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
