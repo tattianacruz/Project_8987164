@@ -20,4 +20,4 @@ This project is a secure job portal application built using ASP.NET Core.
 ## How to run
 1. Open the project in Visual Studio
 2. Run the application
-3. Open https://localhost:xxxx
+3. Open (https://localhost:7272/index.html)
